@@ -1,0 +1,33 @@
+Beginning decompiling
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\console.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\transforms.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\screens.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\credits.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\effects.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\options.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\glitchtext.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\script.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\date.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\poems.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\cgs.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\gui.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\splash.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\poems_special.rpyc
+
+Decompiled C:\Users\Declan\Downloads\dmodding\proj\adws\DDLC-1.1.1-pc\game\definitions.rpyc
+
+end decompiling
