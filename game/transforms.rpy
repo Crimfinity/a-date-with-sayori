@@ -532,6 +532,14 @@ transform glass(x=3.0, t=0.0):
     xcenter 0.5 ycenter 0.5 xpos 640 ypos 360 subpixel True
     on hide:
         easeout t ypos 1500 xpos 640
+transform glass2(x=3.0, t=0.0):
+    xcenter 0.5 ycenter 0.5 xpos 640 ypos 360 subpixel True
+    on hide:
+        easeout t ypos 1500 xpos 640 rotate 15 
+transform glass3(x=3.0, t=0.0):
+    xcenter 0.5 ycenter 0.5 xpos 640 ypos 360 subpixel True
+    on hide:
+        easeout t ypos 1500 xpos 640 rotate -15 
 transform falling:
     yalign 0.0 xalign 0.5
     linear 1.0 yalign 1.0
@@ -594,8 +602,6 @@ init python:
         trans.yoffset = 3 + random.random() * 6 - 3
         return random.random() * 1.2 + 0.3
 
-transform sunset:
-    matrixcolor TintMatrix((255, 202, 202))
 
 transform malpha(a=1.00):
     i11

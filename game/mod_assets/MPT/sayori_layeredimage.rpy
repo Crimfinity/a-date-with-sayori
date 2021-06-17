@@ -93,8 +93,9 @@ image _say_blink_t_a:
 
 layeredimage sayori turned: #turned definitions.
     
-    always "mod_assets/MPT/sayori/sayori_turned_facebase.png" #Always need this face.
     at Flatten
+    always "mod_assets/MPT/sayori/sayori_turned_facebase.png" #Always need this face.
+    
     group outfit: #These attributes are here only to determine which set of "body" sprites to use later.  "null" is what lets us just use these attributes as logic and nothing else.
         attribute uniform null
         attribute casual default null

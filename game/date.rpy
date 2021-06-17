@@ -988,7 +988,8 @@ label sayori_date:
     "Her arm raises above her head as if a rope is in her hand."
 
     show sayori at f11 
-    s lup ce "It'd be so freaky!"
+    s lup ce om "It'd be so freaky!"
+    show sayori cm 
     mc "I...I..."
 
     show s_kill onlayer front:
@@ -1160,7 +1161,7 @@ label sayori_date:
     "Groups of friends sticking together, having their daily conversations fueled by the day's events."
     "They display a sense of bond and familiarity, one that can only be fostered by talking to each other everyday."
 
-    show sayori turned neut oe cm sunset casual at t11
+    show sayori turned neut oe cm casual at t11
 
     "Sayori starts walking ahead of me and I can't help but get distracted."
     "She means the world to me."
@@ -1180,20 +1181,20 @@ label sayori_date:
     show sayori om at f11 
     s lup "For what?"
 
-    show sayori lup rup cm casual sad nl om oe at h11
+    show sayori lup rup cm casual sad nl oe at h11
 
     mc "For being my best friend. For being there for me when I needed you."
     mc "I know I've never really said it before, so I'm taking the chance to say it now."
     show sayori at f11 
-    s turned sad ma "[player]..."
-    show sayori -ma mb at t11 
+    s turned sad mb "[player]..."
+    show sayori ma -mb at t11 
     mc "I mean it."
     mc "You're awesome. And honestly?"
     mc "My life would be a lot sadder without you."
-    show sayori ma -mb 
+    show sayori -ma mb 
     s  "Well..."
 
-    show sayori -ma happ ce om lup rup at hf11
+    show sayori -mb happ ce om lup rup at hf11
 
     s "Thank you for being my best friend, too!"
 
@@ -1225,7 +1226,7 @@ label sayori_date:
 
     m "[player]!"
     show monika cm
-    show sayori om lup at f21 
+    show sayori om lup happ at f21 
     s "Hey Monika!"
     show sayori cm at t21 
     show monika lsur ce om
@@ -1334,6 +1335,7 @@ label sayori_date:
 
     m forward mh -mi  b1b -b1e "Sayori..."
     m "Sayori's dead."
+    show monika at t11 
 
     show glasscr
     play audio crack
@@ -1343,11 +1345,11 @@ label sayori_date:
 
     show black
     play audio brea
-    show sharda at glass(x=10, t=2)
+    show sharda at glass3(x=10, t=2)
     hide sharda
     show shardb at glass(x=10, t=2)
     hide shardb
-    show shardc at glass(x=10, t=2)
+    show shardc at glass2(x=10, t=2)
     hide shardc
     show shardd at glass(x=10, t=2)
     hide shardd
@@ -1355,11 +1357,11 @@ label sayori_date:
     hide sharde
     show shardf at glass(x=10, t=2)
     hide shardf
-    show shardg at glass(x=10, t=2)
+    show shardg at glass2(x=10, t=2)
     hide shardg
     show shardh at glass(x=10, t=2)
     hide shardh
-    show shardi at glass(x=10, t=2)
+    show shardi at glass2(x=10, t=2)
     hide shardi
     show shardj at glass(x=10, t=2)
     hide shardj
@@ -1367,7 +1369,7 @@ label sayori_date:
     hide shardk
     show shardl at glass(x=10, t=2)
     hide shardl
-    show shardm at glass(x=10, t=2)
+    show shardm at glass3(x=10, t=2)
     hide shardm
     show shardn at glass(x=10, t=2)
     hide shardn

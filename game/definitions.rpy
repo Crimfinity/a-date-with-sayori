@@ -1494,5 +1494,5 @@ image monikablur:
     "mod_assets/monikablur.png"
 image yuriblur:
     "mod_assets/yuriblur.png"
-image sayori turned sunset = LayeredImageProxy("sayori turned", sunset)
+
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
