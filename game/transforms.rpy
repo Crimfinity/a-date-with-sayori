@@ -121,6 +121,27 @@ transform t22:
 transform t11:
     tcommon(640)
 
+transform tade31:
+    tcommon(240)
+    transform_anchor True
+    on show:
+        alpha 0.0
+        linear 3.0 alpha 1.0
+    
+transform tade32:
+    tcommon(640)
+    transform_anchor True
+    on show:
+        alpha 0.0
+        linear 3.0 alpha 1.0
+    
+transform tade33:
+    tcommon(1040)
+    transform_anchor True
+    on show:
+        alpha 0.0
+        linear 3.0 alpha 1.0
+    
 
 transform i41:
     tinstant(200)
@@ -282,6 +303,7 @@ transform face(z=0.80, y=500):
     yanchor 1.0 ypos 1.03
     yoffset y
     zoom z*2.00
+
 
 
 transform cgfade:
@@ -498,8 +520,13 @@ transform heartbeat2(m):
         repeat
 
 transform fade_out:
+    alpha 1.0
     on hide:
-        linear 5.0 alpha 0.0
+        linear 3.0 alpha 0.0
+transform fade_in:
+    alpha 0.0
+    on show:
+        linear 3.0 alpha 1.0
 
 transform glass(x=3.0, t=0.0):
     xcenter 0.5 ycenter 0.5 xpos 640 ypos 360 subpixel True
@@ -513,12 +540,62 @@ transform falling:
 transform yuripupils_move:
     function yuripupils_function
 
+transform zoomin:
+    truecenter
+    parallel:
+        ease 2 zoom 3.5 yoffset 500
+transform zoominslow:
+    truecenter
+    parallel:
+        ease 5 zoom 2.5 yoffset 450
+
+transform move:
+    truecenter
+    zoom 2.5 yoffset 450
+    parallel:
+        ease 2.5 yoffset -500
+
+transform move2:
+    truecenter
+    zoom 2.5 yoffset -500
+    parallel:
+        ease 7 yoffset 350
+
+transform zoomout:
+    truecenter
+    zoom 3.5 yoffset 500
+    parallel:
+        ease 1 zoom 1.0 yoffset 0
+
+transform zoomout2:
+    truecenter
+    zoom 2.5 yoffset 350
+    parallel:
+        ease 7 zoom 1.6 yoffset 150
+
+transform move3:
+    truecenter
+    zoom 1.6 yoffset 150
+    linear 1 yoffset -200
+
+transform mov4:
+    truecenter
+    zoom 1.6 yoffset -200
+    ease 1 yoffset 150
+
+transform zoomout3:
+    truecenter
+    zoom 1.6 yoffset 150
+    parallel:
+        ease 4 zoom 1.0 yoffset 0
 init python:
     def yuripupils_function(trans, st, at):
         trans.xoffset = -1 + random.random() * 9 - 4
         trans.yoffset = 3 + random.random() * 6 - 3
         return random.random() * 1.2 + 0.3
 
+transform sunset:
+    matrixcolor TintMatrix((255, 202, 202))
 
 transform malpha(a=1.00):
     i11

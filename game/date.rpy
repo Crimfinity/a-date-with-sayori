@@ -29,18 +29,18 @@ label sayori_date:
     s "You know, the usual."
     show sayori cm at t11 
     mc "And what's the usual, Sayori?"
-    show sayori neut  
+    show sayori om happ at f11  
     s "A little smile here, a little laugh there..."
 
-    show sayori ce lup rup happ at hop
+    show sayori ce lup rup happ at hf11
 
     s "And with a cute boyfriend to do it all with me!"
-    show sayori cm 
+    show sayori cm at t11
     "My face heats up at the mention of the word."
 
     show sayori oe cm 
     mc "S-sayori..."
-    show sayori ldown om sedu mb at f11
+    show sayori ldown sedu mb at f11
     s "Oh what, are you embarrassed?"
     show sayori at t11 
     mc "No, no! That's not it at all!"
@@ -49,14 +49,14 @@ label sayori_date:
     show sayori at f11 
     s  neut -mb ma ce nl "Well, I'm getting used to it just fine."
 
-    show sayori cm -ma -nl happ  
+    show sayori cm -ma -nl happ at t11 
     "She locks arms with me, and huddles up close."
     "I can't help but let out a little chuckle."
     "I sure am a lucky guy."
 
     mc "So...you wanna take a seat?"
 
-    show sayori turned casual neut mi ce at hop
+    show sayori turned casual neut mi ce at hf11
 
     s "Desperately!"
     
@@ -69,11 +69,11 @@ label sayori_date:
     "I pull out the chair opposite to mine."
 
     mc "Here you go."
-    show sayori mb sedu 
+    show sayori rdown mb sedu at f11
     s ce "What a gentleman!"
-    s oe "Ehehehe~"
+    s happ ce "Ehehehe~"
 
-    show sayori cm -mb 
+    show sayori cm oe -mb at t11 
     "Her laugh...I didn't know I missed it so much."
 
     show sayori neut ldown rdown 
@@ -98,7 +98,7 @@ label sayori_date:
     mc "I don't think anyone can blame me for thinking you're just a wee bit more important."
     show sayori dist om at f11 
     s "If you say so."
-    show sayori cm at t11 
+    show sayori cm ldown at t11 
 
     "I grab one of the little menus of the table and hand it over to her."
 
@@ -118,22 +118,30 @@ label sayori_date:
     s "Ehehehe~"
 
 
-    show sayori happ cm e1b at t11 
+    show sayori flus cm rup lup at t11 
+    pause 0.2
+    show eye at i11 zorder 2
 
     "She flips through the menu at lightning speeds, her eyes flickering from one end to the other, making note of every item she wants."
     "I would look at things to order for myself, but..."
     "I've got better things to look at for the time being."
 
-    show sayori show sayori pout rup lup -e1b at hop
-    play sound smack
-    pause .15 
+    hide eye
+    show sayori angr -e1b at hop
+    pause .05
     show sayori ldown rdown 
+    play sound smack
+    show layer master at vpunch
+    pause .25 
 
     "After a solid minute of searching, she sets her menu down with all her force."
 
-    show sayori neut 
+
     mc "You ready to order, Sayori?"
-    show sayori ce happ om at f11 
+    show layer master at zoomin
+    pause 3.0
+    show layer master at zoomout
+    show sayori ce happ lup rup om at hf11 
     s "Yup!"
     show sayori cm oe at t11 
     mc "Alright, I'll call up a waiter."
@@ -147,27 +155,40 @@ label sayori_date:
 
     show sayori om at f11 
     s "Uhh...[player]?"
-    show sayori cm at t11 
+    show sayori ldown rdown cm at t11 
     mc "Y-yeah, I...uhhh...I'll just call him."
     mc "Umm, excuse me, waiter?"
 
-    pause 2 
+    pause 1
 
-    show sayori om at f11 
+    show sayori e1b
+
+    pause 2
+
+    show sayori e1c 
+
+    pause 2
+
+    show sayori neut e1a om at f11 
     s "I think you have to be a bit louder."
     show sayori cm at t11 
     mc "Ugh..."
 
     "I muster up all my courage and let out a decisive roar."
 
+    show layer master at hpunch
+    show sayori e2a lsur lup rup at h11
+
     mc "Excuse me! Waiter!"
+
+    show sayori neut e1a mn b2a
 
     "A waiter finally turns around and begins to come over to our table."
     "Oh thank God."
 
     w "How may I be of service, sir?"
 
-    show sayori casual nl e1b 
+    show sayori casual nl e1b -mn -b2a ldown rdown
 
     mc "Uhh...I'll just have a cup of coffee."
 
@@ -246,25 +267,25 @@ label sayori_date:
     "Just try your best to keep it together."
     "For her."
 
-    show sayori turned neut cm oe ldown rdown at t11
+    show sayori turned neut b2b cm oe ldown rdown at t11
     play music t5 fadein 1.0
 
     "Using all my mental fortitude, I look back up at her."
     "She looks worried."
     "I flash her a smile."
 
-    show sayori happ 
+    show sayori happ b2c 
 
     "She smiles back."
 
-    show sayori neut om at f11 
-    s 1bc "Actually, speaking of the club, how are the others doing?"
+    show sayori neut om -b2c at f11 
+    s "Actually, speaking of the club, how are the others doing?"
     s rup sad "I hope I didn't worry any of them."
     show sayori cm neut at t11 
     mc "They're fine. They were obviously shocked when they heard about everything that went down, but they're also glad to know you're still around."
-    show sayori happ at f11 
-    s "That's good."
-    s ce lup  "I managed to write a few poems while I was at the hospital, so I'll have plenty to share!"
+    show sayori happ om at f11 
+    s b2c "That's good."
+    s ce lup -b2c "I managed to write a few poems while I was at the hospital, so I'll have plenty to share!"
     show sayori cm at t11 
     mc "I can't wait to see them."
     show sayori om ldown rdown at f11 
@@ -280,7 +301,7 @@ label sayori_date:
     mc "If that's the case, I'd love to take a look at it."
 
     show sayori turned neut e1f cm at d11 
-    pause .15 
+    pause .4 
     show sayori -e1f 
 
 
@@ -304,7 +325,7 @@ label sayori_date:
 
     mc "I love you too."
 
-    show sayori happ ldown 
+    show sayori happ e1g b2c ldown 
 
     "Her smile widens."
     "Her eyes start to sparkle as her tears reflect the sunlight."
@@ -330,33 +351,33 @@ label sayori_date:
 
     s dist "..."
 
-    "The smile's fading."
+    "Her smile's fading."
 
     show sayori om rup at f11
     s "I..."
-    s sad "I want to feel happy, [player]."
 
     show sayori cm at t11 
     "My heart strings itself into a knot."
-    "It's coming."
     "No matter the time, no matter the treatment..."
-    "It was always going to come."
+    "There was always going to be a moment of relapse."
+    "A moment where her..."
+    "..."
     "I swallow in anticipation."
 
-    mc "And...?"
+    mc "Sayori...?"
 
-    show sayori happ 
+    show sayori happ  
 
     "Her smile returns in full force."
 
     show sayori ce lup om at hf11 
     play music t5
 
-    s "And you saying that makes me really happy!"
+    s -b2c "You saying that makes me really happy!"
 
     show sayori cm at t11 
     "I suddenly feel like I'm walking on air."
-    "Expecting the worst and getting the best is the best feeling on the planet."
+    "Expecting the worst and getting the best is simply the...best feeling on the planet!"
 
     mc "Well, you'll never stop hearing it."
 
@@ -445,27 +466,46 @@ label sayori_date:
 
     show sayori neut cm oe at t11  
 
-    mc "Since Halloween is around the corner, I was thinking..."
+    mc "Since Halloween is around the corner and the school's holding a party celebrating, I was thinking..."
     mc "Maybe we can go buy some costumes so we can go to it!"
     show sayori at f11 
     s happ cm ce lup "Sounds like fun!"
-    show sayori cm at t11 
+    show sayori oe cm at t11 
     mc "That's the idea."
     s turned neut b1b mb ldown casual "I must've missed so much at school."
     show sayori -b1b -mb rdown cm at t11 
     mc "Oh no."
     mc "You missed out on the monotone teachers and the endless piles of work, {i}what a tragedy.{/i}"
     show sayori at f11 
-    s oe cm lup "Ehehe~"
-    s om "Nothing new, huh?"
+    s oe mn lup "Ehehe~"
+    s om -mn "Nothing new, huh?"
     show sayori cm happ at t11 
     mc "Honestly, I don't even remember much from the past few weeks."
 
     show sayori turned neut oe cm ldown casual
+    show classblur at fade_in
+    show vignette zorder 6 at fade_in
+    pause 3.0
 
     mc "All of it is kind of a blur."
+
+    show monikablur at tade31
+    
     mc "I can't even remember what's been going on at the club."
+
+    show natsukiblur at tade32
+    show yuriblur at tade33
+
     mc "It's like I come in and suddenly I'm just..."
+
+
+    hide natsukiblur with dissolve_scene
+    hide yuriblur with dissolve_scene
+    hide monikablur with dissolve_scene
+    hide classblur with dissolve_scene
+    hide vignette with dissolve_scene
+
+    
     mc "Not there anymore."
     mc "The only thing I can really remember is..."
 
@@ -485,19 +525,20 @@ label sayori_date:
 
     show sayori at f11 
     s turned sad oe om casual "[player]?"
-    show sayori cn at t11 
+    show sayori cm at t11 
     mc "Hm?"
     show sayori om at f11
     s "Are you {i}still{/i} staying up late?"
     show sayori cm at t11 
     mc "Uuh, w...well..."
-    s turned mo e4b casual rup lup "Ehehehe~"
+    show sayori mo e4b casual rup lup at f11
+    s "Ehehehe~"
 
-    show sayori turned happ -mo -e4b om ce nl rup casual lup at hop
+    show sayori turned happ -mo -e4b om ce nl rup casual lup at hf11
 
     s "Well, {i}that's{/i} going to change soon enough!"
 
-    show sayori turned b1e mo -n1 nobl 
+    show sayori turned b1e mo  at t11
 
     "Sayori pumps her fist, with a look of determination on her face, but it just comes off as more cute and silly than serious."
     "The weight lifts off of me as quickly as it started dragging me down."
@@ -509,12 +550,12 @@ label sayori_date:
     s neut om oe -b1e b1a -mo rdown ldown "Yeah, [player]?"
     show sayori cm lsur -b1a at t11 
     mc "Don't ever change."
-    show sayori curi om rup at f11 
+    show sayori curi om rup -nl at f11 
     s "Eh? What do you mean?"
     show sayori neut cm at t11 
     mc "You're perfect."
 
-    show sayori turned sad cm oe casual
+    show sayori turned sad cm nl oe casual
 
     mc "Just the way you are."
     mc "Don't ever let anyone tell you otherwise."
@@ -523,8 +564,6 @@ label sayori_date:
     "Did I...did I say something wrong?"
 
     show sayori e1g b1b ma casual
-
-    "Her tears show themselves once again."
 
     stop music fadeout 2.0
 
@@ -535,24 +574,32 @@ label sayori_date:
 
     play music hb 
     show sayori at f11 
-    s  sad -b1b casual "I don't know."
-    s "I want to feel happy. I really do."
-    s "Everytime you say that you love me or that you think I'm perfect, it's like a dream come true."
-    s turned b1b -e1g ce mg lup casual "But even now, no matter how hard I try..."
-
-    s -b1b e1g -mg om lup casual "I can't help but feel like I'm not worth it! That I'm wasting your time!"
-    s "That I'm being selfish!"
+    s mb sad -b1b casual "Yeah, I'm..."
+    s -mb om rdown "I'm alright."
     show sayori cm at t11 
+
     "My entire body's frozen."
     "The weight is pushing me down. The chair's the only thing between me and the ground."
-    "I can't..."
-    "I can't breathe."
-    show sayori at f11 
-    s turned cry om ce e4e -e1g ldown casual "The rain clouds keep coming back and they just won't go away..."
+    "It's like her entire mood shifted on a dime."
 
-    show sayori turned  cm lup rup casual at t11 
+    mc "I don't think you are..."
+    
+    show sayori happ e1g b2c at f11
 
-    "The tears in Sayori's eyes start dripping down one after another."
+    s om "N-no, don't worry I am."
+
+    show sayori cm at t11
+
+    "She's decidedly not alright."
+    "Was it always this obvious..?"
+
+    show sayori e1h
+
+    "The blue skies deep within her eyes begin to rain."
+
+    show sayori cm lup rup at t11 
+
+    "Their droplets dripping down one after another."
     "Each one splattering on the surface of the table."
     "I can't stay still."
     "Frozen."
@@ -560,9 +607,6 @@ label sayori_date:
     "Not again."
     "No matter how heavy everything feels."
     "I have to do something."
-
-    stop music fadeout 2.0
-    show layer master
 
     mc "Sayori."
     s turned neut e1h om casual "...yeah?"
@@ -586,14 +630,15 @@ label sayori_date:
 
     mc "You're not selfish for wanting to be happy, Sayori."
 
-    show sayori sad
+    show sayori sad ldown rdown
 
     mc "After everything we've both been through, after everything you've done for me..."
     mc "You've been by my side through everything. You've been my rock."
-    mc "Sayori, you're not being selfish. You're not wasting my time!"
-    mc "And I'll tell you this..."
+    mc "And you're..."
+    mc "You're..."
     mc "You're worth everything to me."
 
+    show sayori rup
     "I reach across the table and grab her hand."
 
     mc "So, instead of worrying about how I feel, just let me be that rock for you."
@@ -612,15 +657,18 @@ label sayori_date:
 
     s om lup "If not for me, then for you."
     s "So you could stop worrying so much about me."
-    show sayori cm lsur rup at at h11 
     mc "Sayori..."
+    show sayori e1g cm lsur rup at h11
     w "{i}Ahem.{/i}"
 
- 
-
     "We jump at the waiter seemingly appearing out of nowhere."
+
+    show sayori mj rdown
+
     "Could he have picked a {i}worse{/i} time?"
     "Breathe in, [player]. He's just doing his job."
+
+    show sayori -nl ldown
 
     mc "{i}Yes?{/i}"
     w "Your cheesecake and parfait...{i}sir.{/i}"
@@ -633,8 +681,8 @@ label sayori_date:
     "Hm."
 
     mc "Could we get this to go?"
-    w "...It'll cost extra."
-    mc "That's fine."
+    w "...Yes sir."
+    mc "Thank you."
 
     "The waiter leaves to get the bill."
     "I look over to Sayori, who seems lost in thought."
@@ -649,12 +697,15 @@ label sayori_date:
     "Why can't I think of anything?"
     "Of any way to help her?"
     "The waiter comes out with the bill, a small box and a paper cup with a lid."
-    "I quickly pack everything, pay what's due."
+    "I quickly pack everything, pay what's due, and he gives me a hundred for change."
     "Sayori's already up and ready to leave."
 
-    show sayori turned e1h b1b sad ma casual 
+    show sayori turned e1g b1b sad ma casual 
 
     "She smiles at me."
+
+    show sayori e1h
+
     "..."
     "The tears are still flowing down her face."
 
@@ -704,6 +755,14 @@ label sayori_date:
     show sayori turned vsur oe om rup lup casual at hf11 
     pause 1.5 
     show sayori dist ce om at t11
+    pause 0.3
+    show sayori dist ce ml at t11
+    pause 0.5
+    show sayori dist ce -ml om
+    pause 0.2
+    show sayori dist ce cm
+    pause 0.3
+    show sayori oe
     "The sound of the evil laugh jolts Sayori, making her jump."
 
     play music store fadein 4.0
@@ -716,7 +775,7 @@ label sayori_date:
     "Those words pierce my heart."
     "Even though she's joking, I can't help but feel it's her true emotions bleeding through the cracks."
 
-    show sayori lsur turned casual oe cm nl at face 
+    show sayori lsur turned casual oe cm nl at face
 
     "I wrap my arm around her and pull her close to me."
     "I put on the most serious tone I can manage."
@@ -733,7 +792,6 @@ label sayori_date:
     "I just wish..."
     "I wish I could make her feel happy."
     "As happy as she makes me."
-    "But she's still depressed, no matter what I do."
     "So, I have to be here for her. Support her."
     "So that what happened can never happen again."
     "Because I love her."
@@ -825,7 +883,7 @@ label sayori_date:
 
     hide s_kill onlayer front
 
-    show sayori at f11 
+    show sayori rdown at f11 
     s turned sedu om oe casual ldown rdown "Or maybe you're underthinking it! Ever thought of that?"
 
     show sayori turned sedu cm oe 
@@ -890,17 +948,18 @@ label sayori_date:
     show layer master at heartbeat
     show sayori om rup ldown at f11 
     s "So creepy, right?"
-    s "People used to just get hung to death by the police and stuff."
+    s "People used to just get hanged to death and stuff."
     s "Their last moments would be losing all the breath in their body in one fell swoop."
     s "It's so spooky!"
 
-    show vignette zorder 6 with dissolve
+    show vignette zorder 6 with dissolve_scene
     
+    show layer master at zoominslow
     s neut "Just imagine..."
     s "That same noose..."
     s "That killed so many people..."
 
-    show sayori at hf11
+    show sayori lup at hf11
 
     s happ "Wrapped around my neck!"
 
@@ -914,10 +973,18 @@ label sayori_date:
             0.49
             alpha 0.475
             repeat
+    show layer master at move
     show sayori cm at t11 
     "My eyes water."
-    "They slowly drag up, looking at her."
-    "My body is shivering."
+    "I..."
+    "Sayori..."
+    "She can't..."
+    "No, no, she can't."
+    "How could she..?"
+    show layer master at move2
+
+    "Eyes slowly drag up, her facial expression uncaring."
+    "Body is shivering."
     "Her arm raises above her head as if a rope is in her hand."
 
     show sayori at f11 
@@ -930,10 +997,11 @@ label sayori_date:
         yalign 0.1
     play audio glscare
 
-    show sayori at f11 
-    s turned suicide sad om oe "[player]? Is there something wrong?"
+    show sayori turned suicide sad om oe 
+    s "[player]? Is there something wrong?"
 
     hide s_kill onlayer front
+    show layer master at zoomout2
     show sayori cm at t11 
     mc "Th-that's not funny, Sayori."
     s om "What's not funny?"
@@ -953,8 +1021,8 @@ label sayori_date:
     mc "Why!?"
     mc "Because you were going to kill yourself with one!?"
     hide black
+    hide vignette
     stop music
-    show layer master
 
     show sayori turned casual sad cm oe at s11
 
@@ -966,12 +1034,13 @@ label sayori_date:
     show sayori cm 
     mc "You were about to die, Sayori! I was lucky I even made it in time!"
     show sayori om lup rdown at t11 
-    s "[player], I-"
+    s "[player], I-{nw}"
     show sayori cm 
     mc "You were going to leave me!"
     mc "Leave me alone."
-    mc "{size=10}forever...{/size}"
+    mc "{size=20}forever...{/size}"
 
+    show layer master at move3
     play audio fall
 
     "My body collapses, surrendering to the immense weight planted on me by gravity."
@@ -980,15 +1049,16 @@ label sayori_date:
 
     show sayori casual sad cm oe rup lup at face
 
-    "Sayori bends down and hugs me."
+    "Sayori bends down and hugs me gently, as if only trying to hold me together. To keep me from shattering into pieces."
 
     play music t10
 
     mc "Sayori, I love you. I love you."
     mc "I love you, I love you, I love you."
     mc "Please...just stay with me, okay?"
-    s cry me "[player]..."
+    s cry e1h me "[player]..."
     show sayori ldown rdown 
+    show layer master at mov4
     mc "I know that you think you're not worth my time and my love, but you're dead wrong."
     mc "You keep saying that you just bring me down, but you don't get to decide that!"
     mc "I love you!"
@@ -999,7 +1069,10 @@ label sayori_date:
     mc "I'll...always be there to help you."
     mc "I don't promise that I can really help, but I'll try!"
     mc "I'll try, god damn it!"
-    mc "I'll...try..."
+    show layer master at move3
+    mc "I'll..."
+    show layer master at mov4
+    mc "I'll try."
     mc "You're worth everything I've got, so I have to!"
     mc "Just please...please understand..."
     mc "Do you...do you understand?"
@@ -1018,6 +1091,7 @@ label sayori_date:
     "I hear her whimpers and feel the tears fall on my shoulders."
 
     show sayori at t11
+    show layer master at zoomout3
 
     "She breaks away from the hug and I see her puffy eyes."
     "She gives me a wide smile. So many smiles..."
@@ -1036,22 +1110,40 @@ label sayori_date:
     "I let out a laugh."
 
     mc "What do you think?"
-    s turned mb e1g casual b1b "Ehehehe, just..."
-    s turned ma e1g casual b1b "...just makin' sure."
+
+    show sayori  mb e1g b1b at f11
+
+    s "Ehehehe, just..."
+    s ma "...just makin' sure."
+
+    show sayori at t11
+
     mc "How about we just make you a ghost costume at home?"
-    s 1bd "That sounds like a plan."
+
+    show sayori happ -e1g -n2 om b2c at f11
+
+    s "That sounds like a plan."
+
+    show sayori cm at t11
 
     "I hold her hand and we make our way out the store."
 
-    scene bg streetset
+    scene bg streetset with wipeleft
     show sayori turned casual neut cm oe at t11
     stop music fadeout 5.0
 
     "The owner of the store is smoking by the entrance."
     "He gives me an odd look, but returns to his smoke unfazed."
     "We walk down the sidewalk."
+
     mc "So, straight home or...?"
-    s turned casual neut om ce "Yes, please. I'm tired of walking around."
+
+    show sayori turned casual neut om ce at f11
+
+    s  "Yes, please. I'm tired of walking around."
+
+    show sayori cm oe at t11
+
     mc "Alright, Sayori."
 
     show sayori turned casual happ cm oe
@@ -1068,7 +1160,7 @@ label sayori_date:
     "Groups of friends sticking together, having their daily conversations fueled by the day's events."
     "They display a sense of bond and familiarity, one that can only be fostered by talking to each other everyday."
 
-    show sayori turned neut oe cm casual at t11
+    show sayori turned neut oe cm sunset casual at t11
 
     "Sayori starts walking ahead of me and I can't help but get distracted."
     "She means the world to me."
@@ -1083,7 +1175,7 @@ label sayori_date:
 
     show sayori at f11 
     s neut om oe casual ldown "Umm...are you just gonna stand there or...?"
-    shpw sayori cm at t11 
+    show sayori cm at t11 
     mc "Thank you, Sayori."
     show sayori om at f11 
     s lup "For what?"
@@ -1207,7 +1299,7 @@ label sayori_date:
     "Monika's eyes start to water."
     m forward cry om oe "There's no one there."
 
-    show sayori at fade_out
+    show sayori with dissolve_scene
     hide sayori
     show monika at f22 
     m "Sayori isn't there."

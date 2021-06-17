@@ -175,6 +175,8 @@ image end:
 image bg residential_day = "bg/residential.png"
 image bg residential_dusk = "bg/residential_dusk.png"
 image bg class_day = "bg/class.png"
+image classblur:
+    "mod_assets/blurclass.png"
 image bg cafe = "bg/cafe.jpg"
 image bg corridor = "bg/corridor.png"
 image bg club_day = "bg/club.png"
@@ -1473,4 +1475,24 @@ default sayori_confess = True
 
 
 default natsuki_23 = None
+
+image eye:
+    "mod_assets/MPT/sayori/sayori_turned_eyes_e2b.png"
+    pause 0.2
+    "mod_assets/MPT/sayori/sayori_turned_eyes_e1d.png"
+    pause 0.05
+    "mod_assets/MPT/sayori/sayori_turned_eyes_e2c.png"
+    pause 0.5
+    "mod_assets/MPT/sayori/sayori_turned_eyes_e1d.png"
+    pause 0.05
+    "mod_assets/MPT/sayori/sayori_turned_eyes_e2b.png"
+    pause 0.5
+    repeat
+image natsukiblur:
+    "mod_assets/natsukiblur.png"
+image monikablur:
+    "mod_assets/monikablur.png"
+image yuriblur:
+    "mod_assets/yuriblur.png"
+image sayori turned sunset = LayeredImageProxy("sayori turned", sunset)
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

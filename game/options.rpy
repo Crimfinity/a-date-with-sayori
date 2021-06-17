@@ -1,4 +1,4 @@
-define config.developer = False
+define config.developer = True
 
 
 

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/transforms.rpy", line 598: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    matrixcolor TintMatrix((255, 202, 202))
+                                           ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Thu Jun 17 17:18:35 2021

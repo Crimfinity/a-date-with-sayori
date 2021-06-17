@@ -247,8 +247,8 @@ style navigation_button_text:
     font "gui/font/RifficFree-Bold.ttf"
     color "#fff"
     outlines [(4, "#454545", 0, 0), (2, "#454545", 2, 2)]
-    hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
-    insensitive_outlines [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
+    hover_outlines [(4, "#fff", 0, 0), (2, "#fff", 2, 2)]
+    insensitive_outlines [(4, "#4545", 0, 0), (2, "#4545", 2, 2)]
 
 style main_menu_frame is empty
 style main_menu_hbox is hbox
