@@ -34,6 +34,9 @@ label endgame(pause_length=4.0):
     show end
     with dissolve_scene_full
     pause pause_length
+    stop music fadeout 2 
+    pause .5 
+    scene black with dissolve_scene_full 
     $ quick_menu = True
     return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

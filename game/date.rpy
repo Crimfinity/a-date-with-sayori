@@ -128,7 +128,6 @@ label sayori_date:
 
     hide eye
     show sayori angr -e1b at hop
-    pause .05
     show sayori ldown rdown 
     play sound smack
     show layer master at vpunch
@@ -1623,9 +1622,13 @@ label sayori_date:
 
     call showpoem (eulogy) from _call_showpoem_1
     $ audio.t5c = "<from " + str(currentpos) + " loop 0>bgm/5_mc.ogg"
-    stop music_poem fadeout 2.0
+    $ audio.t5d = "<from " + str(currentpos) + " loop 0>bgm/5_mc2.ogg"
+    stop music
     $ persistent.heknows = True
-    $ renpy.music.play(audio.t5c, fadein=2.0)
+    $ renpy.music.set_volume(1,0,"track1")
+    $ renpy.music.set_volume(0,0,"track2")
+    play track1 t5c fadein 2 
+    play track2 t5d fadein 2
 
     show sayori turned suicide sad om oe at h11:
         alpha .6 
@@ -1650,28 +1653,32 @@ label sayori_date:
     s sad "Please, just..."
     show sayori cm 
     mc "YOU’RE NOT HERE!"
-    s cm oe "I’m always..."
+    s om oe "I’m always..."
+    show sayori cm 
+    $ renpy.music.set_volume(0,45,"track1")
+    $ renpy.music.set_volume(1,45,"track2")
+    show layer screens at hpunch 
     mc "GET OUT!{fast}"
-    mc "GET OUT!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "GET OUT OF MY HEAD!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
-    mc "Get out of my head!{fast}"
+    mc "GET OUT!"
+    "GET OUT OF MY HEAD!{w=.3}{nw}"
+    "GET OUT OF MY HEAD!{w=.3}{nw}"
+    "GET OUT OF MY HEAD!{w=.5}{nw}"
+    "GET OUT OF MY HEAD!{w=.3}{nw}"
+    "GET OUT OF MY HEAD!{w=.3}{nw}"
+    "GET OUT OF MY HEAD!{w=.3}{nw}"
+    "GET OUT OF MY HEAD!{w=.15}{nw}"
+    "GET OUT OF MY HEAD!{w=.15}{nw}"
+    "Get out of my head!{w=.15}{nw}"
+    "Get out of my head!{w=.3}{nw}"
+    "Get out of my head!{w=.3}{nw}"
+    "Get out of my head!{w=.3}{nw}"
+    "Get out of my head!{w=.3}{nw}"
+    "Get out of my head!{w=.15}{nw}"
+    "Get out of my head!{w=.15}{nw}"
+    "Get out of my head!{w=.15}{nw}"
+    "Get out of my head!{nw}"
+    "Get out of my head!{nw}"
+    "Get out of my head!{nw}"
 
     show black onlayer front:
         alpha 0.0

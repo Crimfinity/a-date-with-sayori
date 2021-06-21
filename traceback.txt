@@ -3,34 +3,42 @@
 While running game code:
   File "game/script.rpy", line 28, in script call
     call sayori_date from _call_sayori_date
-  File "game/date.rpy", line 1184, in script
-    show sayori lup rup cm casual sad nl om oe at h11
-  File "renpy/common/00layeredimage.rpy", line 736, in _choose_attributes
-    raise Exception("The attributes for {} conflict: {}".format(tag, " ".join(both)))
-Exception: The attributes for sayori conflict: om cm
+  File "game/date.rpy", line 1631, in script
+    play t5c track1 fadein 2
+  File "renpy/common/000statements.rpy", line 120, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/date.rpy", line 1631, in <module>
+    play t5c track1 fadein 2
+NameError: name 'track1' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 28, in script call
     call sayori_date from _call_sayori_date
-  File "game/date.rpy", line 1184, in script
-    show sayori lup rup cm casual sad nl om oe at h11
-  File "C:\Users\Declan\Downloads\dmodding\renpy-7.3.5-sdk\renpy\ast.py", line 1183, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Declan\Downloads\dmodding\renpy-7.3.5-sdk\renpy\ast.py", line 1153, in show_imspec
-    atl=atl)
-  File "C:\Users\Declan\Downloads\dmodding\renpy-7.3.5-sdk\renpy\exports.py", line 684, in show
-    new_what = renpy.game.context().images.apply_attributes(layer, key, name)
-  File "C:\Users\Declan\Downloads\dmodding\renpy-7.3.5-sdk\renpy\display\image.py", line 934, in apply_attributes
-    return self.choose_image(nametag, required, optional, name)
-  File "C:\Users\Declan\Downloads\dmodding\renpy-7.3.5-sdk\renpy\display\image.py", line 951, in choose_image
-    newattrs = ca(tag, ca_required, ca_optional)
-  File "renpy/common/00layeredimage.rpy", line 736, in _choose_attributes
-    raise Exception("The attributes for {} conflict: {}".format(tag, " ".join(both)))
-Exception: The attributes for sayori conflict: om cm
+  File "game/date.rpy", line 1631, in script
+    play t5c track1 fadein 2
+  File "C:\Users\Declan\Downloads\dmodding\proj\a-date-with-sayori\renpy\ast.py", line 1949, in execute
+    self.call("execute")
+  File "C:\Users\Declan\Downloads\dmodding\proj\a-date-with-sayori\renpy\ast.py", line 1937, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Declan\Downloads\dmodding\proj\a-date-with-sayori\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 120, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\Declan\Downloads\dmodding\proj\a-date-with-sayori\renpy\python.py", line 2059, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Declan\Downloads\dmodding\proj\a-date-with-sayori\renpy\python.py", line 2052, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/date.rpy", line 1631, in <module>
+    play t5c track1 fadein 2
+NameError: name 'track1' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 A Date With Sayori 1.1.0
-Thu Jun 17 14:15:59 2021
+Sun Jun 20 19:11:35 2021

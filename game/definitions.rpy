@@ -1,7 +1,10 @@
 
 image ssl = "mod_assets/Shilloute.png"
 
-
+init python:
+    renpy.music.register_channel("ambient", "sfx", True)
+    renpy.music.register_channel("track1", "music", True)
+    renpy.music.register_channel("track2", "music", True)
 
 
 define persistent.demo = False
