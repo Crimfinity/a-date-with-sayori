@@ -13,7 +13,12 @@ init python:
     title = "After Sayori",
     text = """\
     
-Trying to imagine a life after Sayori has been the hardest task I’ve ever been given. Sayori...was the best person I knew. She was loving, she was caring and she always put us first. She was amazing. I couldn’t have asked for a better friend. I just wish...I wish I told her that more often. That she was the best friend I could’ve asked for. That everyday we walked to school together was brighter because of it. That every smile and every laugh, that it all made it better. I just wish I could’ve told her that. I wish I could just see her again, one more time. Tell her that I love her. Everyday, it rings in my head those last words she ever said to me. 
+
+Trying to imagine a life after Sayori is the hardest thing I've ever had to do. Sayori was far and away the best person I knew. She was loving, she was caring and she always put us first. She was amazing. Beyond amazing, even. I couldn't have asked for a better friend. I wish I told her that more often. I wish I told her that she was the best friend I could've asked for. That everyday we walked to school together was brighter because of her. That every smile and every laugh made it all better. Instead, I spent my time making her feel unwanted. Making her feel like she wasn't good enough.
+
+I wish I could see her again. Just one more time. Tell her that I love her. There isn't a second that goes by where I don't live in regret of all the things I didn't do for her. I was her best friend. She trusted me. She…
+
+Everyday, it rings in my head those last words she ever said to me. 
 
 “You know what’s best for me.”
 
@@ -22,10 +27,10 @@ Yet, I couldn’t stop her. I couldn’t help her. I couldn’t...it just keeps 
 “You know what’s best for me.”
 “You know what’s best for me.”
 
-I just want it to stop. I just want to get that chance, to tell her that...   
+I just want it to stop. I just want to get that chance, to tell her that...
 
 
-I can’t."""
+I can’t.”"""
 
 
 
@@ -756,8 +761,6 @@ label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, w
     if not persistent.first_poem:
         $ persistent.first_poem = True
         $ renpy.save_persistent()
-        show expression "gui/poem_dismiss.png" as poem_dismiss:
-            xpos 1050 ypos 590
     with Dissolve(1)
     $ pause()
     if img:

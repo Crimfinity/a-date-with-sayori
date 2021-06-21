@@ -26,7 +26,7 @@ image menu_bg:
     truecenter
     "white"
     "bg/cafe.jpg"
-    logofade
+    logofade2
 
 image game_menu_bg:
     topleft

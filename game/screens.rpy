@@ -139,8 +139,14 @@ style window:
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
-
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+style window2:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+    background Image("gui/textbox2.png", xalign=0.5, yalign=1.0)
+
 
 style window_monika is window:
     background Image("gui/textbox_monika.png", xalign=0.5, yalign=1.0)

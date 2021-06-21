@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/transforms.rpy", line 598: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    matrixcolor TintMatrix((255, 202, 202))
-                                           ^
+File "game/transforms.rpy", line 635: expected 'name' not found.
+    transform:
+             ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Jun 17 14:06:49 2021
+Mon Jun 21 15:14:24 2021

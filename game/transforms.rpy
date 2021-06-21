@@ -43,11 +43,18 @@ transform sink(x=640, z=0.80):
     easein .5 ypos 1.06
 
 
+transform hopghost(x=640, z=0.80):
+    xcenter x yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha .60 subpixel True
+    easein .1 yoffset -20
+    easeout .1 yoffset 0
+    block:
+        ease 3 yoffset 15
+        ease 3 yoffset -15
+        repeat
 transform hop(x=640, z=0.80):
     xcenter x yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
     easein .1 yoffset -20
     easeout .1 yoffset 0
-
 
 transform hopfocus(x=640, z=0.80):
     xcenter x yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.05 alpha 1.00 subpixel True
@@ -432,6 +439,14 @@ image noise:
 
 transform logofade:
     alpha 0.0
+    yoffset -300
+    1 
+    parallel:
+        linear 2.0 alpha 1.00
+    parallel:
+        ease 2 yoffset 0
+transform logofade2:
+    alpha 0.0
     linear 1.0 alpha 1.00
 
 transform noise_alpha:
@@ -528,7 +543,7 @@ transform fade_in:
     on show:
         linear 3.0 alpha 1.0
 
-transform glass(x=3.0, t=0.0):
+transform glass4(x=3.0, t=0.0):
     xcenter 0.5 ycenter 0.5 xpos 640 ypos 360 subpixel True
     on hide:
         easeout t ypos 1500 xpos 640
@@ -593,6 +608,7 @@ transform mov4:
 
 transform zoomout3:
     truecenter
+    subpixel True
     zoom 1.6 yoffset 150
     parallel:
         ease 4 zoom 1.0 yoffset 0
@@ -606,4 +622,26 @@ init python:
 transform malpha(a=1.00):
     i11
     alpha a
+
+transform anxiety:
+    truecenter
+    subpixel True
+    zoom 1.2
+    parallel:
+        block:
+            ease 1 rotate 0
+            ease 5 rotate 3
+            time 1
+            ease 5 rotate -3    
+            ease 4 rotate -.40
+            repeat
+    parallel:
+        block:
+            dizzy(.8, 2.0)
+
+transform floating:
+    block:
+        ease 3 yoffset 25
+        ease 3 yoffset -25
+        repeat
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

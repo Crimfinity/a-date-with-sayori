@@ -137,7 +137,7 @@ default preferences.sfx_volume = 0.75
 
 
 
-define config.save_directory = "DDLC-1454445547"
+define config.save_directory = "ADWS"
 
 
 

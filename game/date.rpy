@@ -42,21 +42,21 @@ label sayori_date:
     mc "S-sayori..."
     show sayori ldown sedu mb at f11
     s "Oh what, are you embarrassed?"
-    show sayori at t11 
+    show sayori -mb at t11 
     mc "No, no! That's not it at all!"
     mc "It's just..."
     mc "I don't ever think I'm going to get used to you calling me that."
     show sayori at f11 
-    s  neut -mb ma ce nl "Well, I'm getting used to it just fine."
+    s  neut mb  ce nl "Well, I'm getting used to it just fine."
 
-    show sayori cm -ma -nl happ at t11 
+    show sayori cm -mb -nl happ at t11 
     "She locks arms with me, and huddles up close."
     "I can't help but let out a little chuckle."
     "I sure am a lucky guy."
 
     mc "So...you wanna take a seat?"
 
-    show sayori turned casual neut mi ce at hf11
+    show sayori turned casual neut mi oe at hf11
 
     s "Desperately!"
     
@@ -139,7 +139,7 @@ label sayori_date:
     mc "You ready to order, Sayori?"
     show layer master at zoomin
     pause 3.0
-    show layer master at zoomout
+    show layer master
     show sayori ce happ lup rup om at hf11 
     s "Yup!"
     show sayori cm oe at t11 
@@ -200,7 +200,7 @@ label sayori_date:
 
     show sayori om ldown rdown 
     s "I don't want anything."
-
+    show sayori cm 
     w "How would you like it?"
     mc "...Black, two lumps."
     w "Very good, sir, I'll be right back."
@@ -376,7 +376,7 @@ label sayori_date:
 
     show sayori cm at t11 
     "I suddenly feel like I'm walking on air."
-    "Expecting the worst and getting the best is simply the...best feeling on the planet!"
+    "Expecting the worst and getting the best is simply the...{w=.3}best feeling on the planet!"
 
     mc "Well, you'll never stop hearing it."
 
@@ -401,7 +401,7 @@ label sayori_date:
     show sayori n3 nerv om at f11 
     s "Weeellll..."
 
-    show sayori turned doub ma oe casual
+    show sayori turned doub ma oe casual at t11 
 
     "She turns the menu towards me and points to a small cheesecake and parfait."
     "I can feel my wallet tearing itself apart."
@@ -433,9 +433,9 @@ label sayori_date:
     "The waiter makes a beeline for the kitchen."
 
     mc "That was weird."
-    show sayori happ -n3 om at f11 
+    show sayori happ -n3 om oe at f11 
     s "I bet he's not used to seeing such a high roller spoil his date."
-    show sayori cm 
+    show sayori cm at t11 
     "I lean back into my chair trying to act all cool."
 
     mc "Well, it's just a natural part of who I am."
@@ -468,7 +468,7 @@ label sayori_date:
     mc "Since Halloween is around the corner and the school's holding a party celebrating, I was thinking..."
     mc "Maybe we can go buy some costumes so we can go to it!"
     show sayori at f11 
-    s happ cm ce lup "Sounds like fun!"
+    s happ om ce lup "Sounds like fun!"
     show sayori oe cm at t11 
     mc "That's the idea."
     s turned neut b1b mb ldown casual "I must've missed so much at school."
@@ -600,7 +600,7 @@ label sayori_date:
 
     "Their droplets dripping down one after another."
     "Each one splattering on the surface of the table."
-    "I can't stay still."
+    "I can't just stay still."
     "Frozen."
     "Doing nothing."
     "Not again."
@@ -656,6 +656,7 @@ label sayori_date:
 
     s om lup "If not for me, then for you."
     s "So you could stop worrying so much about me."
+    show sayori cm at t11 
     mc "Sayori..."
     show sayori e1g cm lsur rup at h11
     w "{i}Ahem.{/i}"
@@ -972,7 +973,11 @@ label sayori_date:
             0.49
             alpha 0.475
             repeat
-    show layer master at move
+    show layer master at anxiety:
+        truecenter
+        zoom 2.5 yoffset 450
+        parallel:
+            ease 2.5 yoffset -500
     show sayori cm at t11 
     "My eyes water."
     "I..."
@@ -980,7 +985,11 @@ label sayori_date:
     "She can't..."
     "No, no, she can't."
     "How could she..?"
-    show layer master at move2
+    show layer master at anxiety:
+        truecenter
+        zoom 2.5 yoffset -500
+        parallel:
+            ease 7 yoffset 350
 
     "Eyes slowly drag up, her facial expression uncaring."
     "Body is shivering."
@@ -1001,7 +1010,7 @@ label sayori_date:
     s "[player]? Is there something wrong?"
 
     hide s_kill onlayer front
-    show layer master at zoomout2
+    show layer master at zoomout2, anxiety 
     show sayori cm at t11 
     mc "Th-that's not funny, Sayori."
     s om "What's not funny?"
@@ -1023,7 +1032,9 @@ label sayori_date:
     hide black
     hide vignette
     stop music
-
+    show layer master:
+        truecenter
+        zoom 1.6 yoffset 150
     show sayori turned casual sad cm oe at s11
 
     "She flinches back."
@@ -1128,8 +1139,9 @@ label sayori_date:
 
     "I hold her hand and we make our way out the store."
 
-    scene bg streetset with wipeleft
+    scene bg streetset 
     show sayori turned casual neut cm oe at t11
+    with wipeleft
     stop music fadeout 5.0
 
     "The owner of the store is smoking by the entrance."
@@ -1209,7 +1221,7 @@ label sayori_date:
 
     mc "So, Sayori, my house or yours?"
 
-    show sayori dist ldown rdown
+    show sayori dist ldown rdown -nl
 
     "I hear no response."
 
@@ -1237,7 +1249,9 @@ label sayori_date:
     m neut mg -mi "We were worried sick."
     show monika cm -mg at t22
     mc "I just missed a day of school. What's there to worry about?"
+    show monika at f22 
     m forward b1b neut mi "Where have you been?"
+    show monika -mi cm at t22 
 
     "I take a look at Sayori."
 
@@ -1299,12 +1313,13 @@ label sayori_date:
     "Monika's eyes start to water."
     m forward cry om oe "There's no one there."
 
-    show sayori with dissolve_scene
-    hide sayori
+    show sayori:
+        alpha 1 
+        linear 8 alpha 0
     show monika at f22 
     m "Sayori isn't there."
-    m forward cry cm oe "It's just you and me."
-    show monika at t22 
+    m forward cry oe "It's just you and me."
+    show monika cm at t22 
     mc "What are you saying? She's right he-"
 
     "..."
@@ -1346,33 +1361,33 @@ label sayori_date:
     play audio brea
     show sharda at glass3(x=10, t=2)
     hide sharda
-    show shardb at glass(x=10, t=2)
+    show shardb at glass4(x=10, t=2)
     hide shardb
     show shardc at glass2(x=10, t=2)
     hide shardc
-    show shardd at glass(x=10, t=2)
+    show shardd at glass4(x=10, t=2)
     hide shardd
-    show sharde at glass(x=10, t=2)
+    show sharde at glass4(x=10, t=2)
     hide sharde
-    show shardf at glass(x=10, t=2)
+    show shardf at glass4(x=10, t=2)
     hide shardf
     show shardg at glass2(x=10, t=2)
     hide shardg
-    show shardh at glass(x=10, t=2)
+    show shardh at glass4(x=10, t=2)
     hide shardh
     show shardi at glass2(x=10, t=2)
     hide shardi
-    show shardj at glass(x=10, t=2)
+    show shardj at glass4(x=10, t=2)
     hide shardj
-    show shardk at glass(x=10, t=2)
+    show shardk at glass4(x=10, t=2)
     hide shardk
-    show shardl at glass(x=10, t=2)
+    show shardl at glass4(x=10, t=2)
     hide shardl
     show shardm at glass3(x=10, t=2)
     hide shardm
-    show shardn at glass(x=10, t=2)
+    show shardn at glass4(x=10, t=2)
     hide shardn
-    show shardo at glass(x=10, t=2)
+    show shardo at glass4(x=10, t=2)
     hide shardo
 
     hide monika
@@ -1380,7 +1395,7 @@ label sayori_date:
     window hide(None)
     pause 5
     window auto
-
+    $ style.say_window = style.window2
     "Sayori’s..."
 
     play music hb 
@@ -1630,8 +1645,7 @@ label sayori_date:
     play track1 t5c fadein 2 
     play track2 t5d fadein 2
 
-    show sayori turned suicide sad om oe at h11:
-        alpha .6 
+    show sayori turned suicide sad om oe at hopghost
 
     s "[player]!"
     show sayori cm     
@@ -1646,7 +1660,14 @@ label sayori_date:
     mc "No."
     show sayori worr om 
     s "[player], just calm do-"
-    show sayori cm 
+    #show sayori cm at i11:
+    #    alpha .6 
+    #    block:
+    #        ease 3 yoffset 5
+    #        ease 3 yoffset -15
+    #        repeat
+    $ renpy.music.set_volume(0,20,"track1")
+    $ renpy.music.set_volume(1.5,20,"track2")
     mc "NO!"
     show sayori om 
     s "[player]..."
@@ -1655,8 +1676,6 @@ label sayori_date:
     mc "YOU’RE NOT HERE!"
     s om oe "I’m always..."
     show sayori cm 
-    $ renpy.music.set_volume(0,45,"track1")
-    $ renpy.music.set_volume(1,45,"track2")
     show layer screens at hpunch 
     mc "GET OUT!{fast}"
     mc "GET OUT!"
@@ -1688,7 +1707,7 @@ label sayori_date:
     mc "{size=20}Get out of my head!{/size}"
     mc "{size=20}Get out of my head!{/size}"
     mc "{size=20}Get out of my head!{/size}"
-
+    $ style.say_window = style.window
 
     window hide(None)
     window auto
