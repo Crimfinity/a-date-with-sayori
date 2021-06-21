@@ -1642,9 +1642,10 @@ label sayori_date:
     $ persistent.heknows = True
     $ renpy.music.set_volume(1,0,"track1")
     $ renpy.music.set_volume(0,0,"track2")
+    $ renpy.music.set_volume(0,0,"track3")
     play track1 t5c fadein 2 
     play track2 t5d fadein 2
-
+    play track3 vinyl 
     show sayori turned suicide sad om oe at hopghost
 
     s "[player]!"
@@ -1668,6 +1669,7 @@ label sayori_date:
     #        repeat
     $ renpy.music.set_volume(0,20,"track1")
     $ renpy.music.set_volume(1.5,20,"track2")
+    $ renpy.music.set_volume(1.5,20,"track3")
     mc "NO!"
     show sayori om 
     s "[player]..."
@@ -1703,10 +1705,11 @@ label sayori_date:
         alpha 0.0
         0.25
         linear 4.0 alpha 1.00
-
-    mc "{size=20}Get out of my head!{/size}"
-    mc "{size=20}Get out of my head!{/size}"
-    mc "{size=20}Get out of my head!{/size}"
+    $ renpy.music.set_volume(0,8,"track2")
+    
+    mc "{size=20}Get out of my head!{/size}{w=4}{nw}"
+    mc "{size=20}Get out of my head!{/size}{w=1}{nw}"
+    mc "{size=20}Get out of my head!{/size}{w=1}{nw}"
     $ style.say_window = style.window
 
     window hide(None)

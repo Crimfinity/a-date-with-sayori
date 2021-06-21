@@ -27,13 +27,13 @@ label start:
 
     call sayori_date from _call_sayori_date
 
-label endgame(pause_length=4.0):
+label endgame:
     $ quick_menu = False
     stop music fadeout 2.0
     scene black
     show end
     with dissolve_scene_full
-    pause pause_length
+    pause 5
     stop music fadeout 2 
     pause .5 
     scene black with dissolve_scene_full 
