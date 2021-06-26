@@ -802,7 +802,7 @@ label sayori_date:
 
     show sayori lsur turned casual om oe at t22
 
-    "She scrolls through the many costume on the hangers, searching all around."
+    "She scrolls through the many costumes on the hangers, searching all around."
 
     show sayori curi at t21
 
@@ -1288,7 +1288,7 @@ label sayori_date:
     m "...!"
 
     show monika sad oe mh lpoint at f22
-    m "[player], Have you been getting enough sleep lately?"
+    m "[player], have you been getting enough sleep lately?"
     show monika -mh cm at t22 
     mc "Surprisingly enough, yeah."
     show monika om at f22 

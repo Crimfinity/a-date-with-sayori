@@ -51,7 +51,7 @@ style hyperlink_text:
 
 style splash_text:
     size 24
-    color "#000"
+    color "#fff"
     font gui.default_font
     text_align 0.5
     outlines []

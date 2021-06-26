@@ -109,12 +109,80 @@ transform menu_art_move(z, x, z2):
 
 image intro:
     truecenter
-    "white"
-    0.5
-    "bg/splash.png" with Dissolve(0.5, alpha=True)
-    2.5
-    "white" with Dissolve(0.5, alpha=True)
-    0.5
+    "mod_assets/splash/va.png"
+    zoom 0.1
+    xoffset -1300
+    yoffset -600
+    parallel:
+         ease 4.5 rotate 2880 zoom 0.25
+    parallel:
+       ease (5-0.05) xoffset -16
+    parallel: 
+        linear (5-0.05) yoffset 18 
+    time (6.0-0.05)
+    parallel:
+       ease (2-0.05) xoffset 0 yoffset 0
+    
+image intro3d:
+    alpha 0.0
+    "mod_assets/splash/va3d.png" 
+    zoom 0.25
+    xoffset -1500
+    yoffset 900 
+    parallel:
+       linear (5-0.05) rotate 5400
+    parallel:
+       ease (5-0.05) xoffset 0 yoffset 18
+    time 7.0
+    parallel:
+       ease (2-0.05) alpha 1.0
+
+image plus:
+    time (4.0-0.05)
+    "mod_assets/splash/plus.png"
+    xoffset 165 
+    yoffset 450
+    zoom 10.0
+    xzoom 1.0
+    parallel:
+        ease (1-0.05) zoom 0.5 yoffset -450
+        ease (0.5-0.05) zoom 0.25 yoffset -415
+        ease (0.25-0.05) xzoom 1.25 yzoom 0.75 yoffset -420
+        ease (0.25-0.05) xzoom 1.0 yzoom 1.0 yoffset -415
+    pause 0.1
+    parallel:
+        ease 2 xoffset 175 yoffset -425
+    
+    #xoffset 1500
+    #yoffset -900
+    #parallel:
+     #   linear 5 rotate 5400
+    #parallel:
+        #ease 5 xoffset 150 yoffset -425
+image plus3d:
+    alpha 0.0
+    time (6.9-0.05)
+    "mod_assets/splash/plus3d.png"
+    zoom 0.25
+    xoffset 175 
+    yoffset -425
+    parallel:
+        ease (1.25-0.05) alpha 1.0
+
+image pink:
+    truecenter
+    time (6.5-0.05)
+    "mod_assets/splash/pinkcircle.png"
+    zoom 0.0
+    parallel:
+        ease (5-0.05) zoom 200.0
+
+image whitec:
+    truecenter
+    "mod_assets/splash/whitecircle.png"
+    zoom 0.0
+    parallel:
+        ease (5-0.05) zoom 200.0
 
 image warning:
     truecenter
@@ -311,16 +379,36 @@ label splashscreen:
 
     show white
     $ persistent.ghost_menu = False
+    $ splash_message = splash_message_default
     $ config.main_menu_music = audio.t1
-    $ renpy.music.play(config.main_menu_music)
     $ starttime = datetime.datetime.now()
-    show intro with Dissolve(0.5, alpha=True)
-    $ pause(3.0 - (datetime.datetime.now() - starttime).total_seconds())
-    hide intro with Dissolve(max(0, 3.5 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+    stop music
+    show pink with Dissolve(0.05, alpha=True)
+    show intro3d with Dissolve(0.05, alpha=True)
+    show intro with Dissolve(0.05, alpha=True)
+    show plus3d with Dissolve(0.05, alpha=True)
+    show plus with Dissolve(0.05, alpha=True)
+    pause(3.45)
+    play music audio.va
+
+    pause (8.55)
+    show whitec with Dissolve(0.1, alpha=True)
+    hide pink 
+    hide intro3d 
+    hide intro 
+    hide plus3d 
+    hide plus
+    hide whitec
+    pause (1.0)
+    hide white
+    show black
+    $ renpy.music.play(config.main_menu_music)
+    with Dissolve(1.0, alpha=True)
+    show black
     $ splash_message = renpy.random.choice(splash_messages)
-    show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+    show splash_warning "[splash_message]" with Dissolve(max(0, 4.0), alpha=True)
     $ pause(6.0 - (datetime.datetime.now() - starttime).total_seconds())
-    hide splash_warning with Dissolve(max(0, 6.5 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
+    hide splash_warning with Dissolve(1.0, alpha=True)
     $ pause(6.5 - (datetime.datetime.now() - starttime).total_seconds())
     $ config.allow_skipping = True
     return

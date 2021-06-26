@@ -101,7 +101,7 @@ define audio.t3m = "<loop 4.618>bgm/3.ogg"
 define audio.t4 = "<loop 19.451>bgm/4.ogg"
 define audio.t4g = "<loop 1.000>bgm/4g.ogg"
 define audio.t5 = "<loop 4.444>bgm/5.ogg"
-
+define audio.va = "mod_assets/splash/VAintro.ogg"
 
 define audio.tmonika = "<loop 4.444>bgm/5_monika.ogg"
 define audio.tsayori = "<loop 4.444>bgm/5_sayori.ogg"
