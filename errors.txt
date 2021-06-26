@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/transforms.rpy", line 635: expected 'name' not found.
-    transform:
-             ^
+File "game/screens.rpy", line 142: end of line expected.
+    properties gui.quick_button_text_idle_color = "#000"
+                                                ^
+
+File "game/screens.rpy", line 149: end of line expected.
+    properties gui.quick_button_text_idle_color = "#fff"
+                                                ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jun 21 15:14:24 2021
+Sun Jun 27 02:31:58 2021

@@ -391,7 +391,7 @@ label splashscreen:
     pause(3.45)
     play music audio.va
 
-    pause (6.55)
+    pause (8.0)
     show whitec with Dissolve(0.1, alpha=True)
     pause 1.5
     hide pink 
@@ -399,9 +399,9 @@ label splashscreen:
     hide intro 
     hide plus3d 
     hide plus
-    hide whitec
-    #pause (1.0)
     hide white
+    hide whitec
+    pause (1.0)
     show black
     $ renpy.music.play(config.main_menu_music)
     with Dissolve(1.0, alpha=True)

@@ -26,33 +26,33 @@ define gui.activate_sound_glitch = "gui/sfx/select_glitch.ogg"
 
 
 
-define gui.accent_color = '#ffffff'
+## Color used to label and highlight text.
+define -2 gui.accent_color = '#ffffff'
 
+## The color used for a text button when it is neither selected nor hovered.
+define -2 gui.idle_color = '#aaaaaa'
 
-define gui.idle_color = '#aaaaaa'
+## The small color is used for small text, which needs to be brighter/darker to
+## achieve the same effect.
+define -2 gui.idle_small_color = '#ffff'
 
+## The color that is used for buttons and bars that are hovered.
+define -2 gui.hover_color = '#cc6699'
 
+## The color used for a text button when it is selected but not focused.
+define -2 gui.selected_color = '#bb5588'
 
-define gui.idle_small_color = '#333'
+## The color used for a text button when it cannot be selected.
+define -2 gui.insensitive_color = '#aaaaaa7f'
 
+## Colors used for the portions of bars that are not filled in. These are not
+## used directly, but are used when re-generating bar image files.
+define -2 gui.muted_color = '#6666a3'
+define -2 gui.hover_muted_color = '#9999c1'
 
-define gui.hover_color = '#ffff'
-
-
-
-define gui.selected_color = '#ffff'
-
-
-define gui.insensitive_color = '#aaaaaa7f'
-
-
-
-define gui.muted_color = '#6666a3'
-define gui.hover_muted_color = '#9999c1'
-
-
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+## The colors used for dialogue and menu choice text.
+define -2 gui.text_color = '#ffffff'
+define -2 gui.interface_text_color = '#ffffff'
 
 
 
@@ -70,7 +70,7 @@ define gui.interface_font = "gui/font/Aller_Rg.ttf"
 define gui.text_size = 24
 
 
-define gui.name_text_size = 24
+define gui.name_text_size = 30
 
 
 define gui.interface_text_size = 24
@@ -111,7 +111,7 @@ define gui.textbox_yalign = 0.99
 
 
 define gui.name_xpos = 350
-define gui.name_ypos = -3
+define gui.name_ypos = 16
 
 
 
@@ -194,10 +194,10 @@ define gui.page_button_borders = Borders(10, 4, 10, 4)
 
 
 define gui.quick_button_text_size = 14
-define gui.quick_button_text_idle_color = "#522"
-define gui.quick_button_text_hover_color = "#fff"
+define gui.quick_button_text_idle_color = "#fff"
+define gui.quick_button_text_hover_color = "#aaa"
 define gui.quick_button_text_selected_color = gui.accent_color
-define gui.quick_button_text_insensitive_color = "#a66"
+define gui.quick_button_text_insensitive_color = "#aaa"
 
 
 
@@ -425,7 +425,7 @@ init python:
         
         
         gui.textbox_height = 240
-        gui.name_xpos = 80
+        gui.name_xpos = 350
         gui.text_xpos = 90
         gui.text_width = 1100
         
