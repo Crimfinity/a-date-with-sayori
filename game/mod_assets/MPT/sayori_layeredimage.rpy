@@ -174,7 +174,7 @@ layeredimage sayori turned: #turned definitions.
         attribute rup:
             "mod_assets/MPT/sayori/sayori_turned_casual_right_up.png"
 
-    group left if_any(["suicide"]):
+    group right if_any(["suicide"]):
         attribute ldown default:
             "mod_assets/MPT/sayori/sayori_turned_pyjama_right_down.png"
         attribute lup:
