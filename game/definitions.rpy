@@ -123,7 +123,7 @@ define audio.t9g = "<loop 1.532>bgm/9g.ogg"
 define audio.t10 = "<loop 5.861>bgm/10.ogg"
 define audio.t10y = "<loop 0>bgm/10-yuri.ogg"
 define audio.td = "<loop 36.782>bgm/d.ogg"
-define audio.store = "<loop 10>bgm/store.ogg"
+define audio.store = "<loop 10.54>bgm/store.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
